@@ -295,8 +295,6 @@ export default function CaliforniaDreams() {
     ["Início",           "hero"],
     ["Teaser",           "teaser"],
     ["Sinopse",          "sinopse"],
-    ["Assista",          "video"],
-    ["Elenco",           "elenco"],
     ["Making Of",        "making-of"],
     ["Produtora",        "produtora"],
     ["Pasta de Produção","pasta"],
@@ -393,7 +391,7 @@ export default function CaliforniaDreams() {
         <PlayThumb
           src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=320&fit=crop&q=80"
           label="TEASER" height={200}/>
-        <GoldButton onClick={() => goto("video")}>Veja Agora</GoldButton>
+        <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=qBtpMlnyAV4", "_blank")}>Veja Agora</GoldButton>
       </section>
 
       {/* ══ SINOPSE ══ */}
@@ -402,7 +400,7 @@ export default function CaliforniaDreams() {
         <p style={{ maxWidth: 720, margin: "0 auto 52px", textAlign: "center", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
           Para sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
         </p>
-        <GoldButton onClick={() => goto("video")}>Veja Agora</GoldButton>
+        <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=qBtpMlnyAV4", "_blank")}>Veja Agora</GoldButton>
       </section>
 
       {/* ══ SOBRE A SUN FILMES ══ */}
@@ -438,7 +436,7 @@ export default function CaliforniaDreams() {
         </div>
         {/* Veja Agora button */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 48 }}>
-          <a href="https://youtu.be/Lu-lkV2pUBM" target="_blank" rel="noreferrer"
+          <a href="https://www.youtube.com/watch?v=qBtpMlnyAV4" target="_blank" rel="noreferrer"
             style={{ display: "inline-flex", alignItems: "center", background: "#a060f5", color: "#fff", textDecoration: "none", padding: "14px 36px", borderRadius: 10, fontFamily: FONT, fontSize: 16, fontWeight: 700, letterSpacing: "0.02em", boxShadow: "0 4px 24px rgba(160,96,245,0.4)" }}>
             Veja Agora
           </a>

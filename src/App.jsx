@@ -487,6 +487,10 @@ export default function CaliforniaDreams() {
           <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.8vw,18px)", color: "#ccc", lineHeight: 1.85, textAlign: "justify", marginTop: 20 }}>
             Os resultados indicam que, embora a inteligência artificial possa oferecer benefícios e apoio momentâneo, ela não substitui as relações humanas nem o acompanhamento psicológico profissional. Dessa forma, seu uso deve ser compreendido como um recurso complementar, preservando a importância das conexões humanas para a saúde emocional e o bem-estar.
           </p>
+
+          <div style={{ marginTop: 48, borderRadius: 12, overflow: "hidden", border: "1px solid #2a1a4a" }}>
+            <img src="/TERMOS DE USO_2.png" alt="Termos de Uso" style={{ width: "100%", height: "auto", display: "block" }} />
+          </div>
         </div>
       </section>
 

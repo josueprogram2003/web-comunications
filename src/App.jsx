@@ -55,8 +55,8 @@ _style.textContent = `
       flex-direction: column;
       position: fixed;
       top: 72px; left: 0; right: 0;
-      background: #111;
-      border-bottom: 1px solid #222;
+      background: #08061a;
+      border-bottom: 1px solid #2a1a4a;
       padding: 16px 24px 24px;
       z-index: 499;
     }
@@ -84,8 +84,11 @@ _style.textContent = `
 document.head.appendChild(_style);
 
 const FONT = "'Sora', sans-serif";
-const BG   = "#111";
-const GOLD = "#c8a030";
+const BG     = "#08061a";
+const BG2    = "#0d0a22";
+const BG3    = "#110e2a";
+const GOLD   = "#a060f5";           /* accent purple */
+const GRAD   = "linear-gradient(135deg, #3a50f0 0%, #8030cc 50%, #d040be 100%)";
 
 /* ════════════════ DATA ════════════════ */
 
@@ -164,7 +167,7 @@ function GoldButton({ children, onClick, fullWidth }) {
     <button onClick={onClick}
       onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
       style={{
-        background: hov ? "#f0c040" : GOLD, color: "#111", border: "none", borderRadius: 3,
+        background: hov ? GRAD : GOLD, color: "#fff", border: "none", borderRadius: 6,
         padding: "14px 44px", fontSize: "clamp(15px,2vw,20px)", fontWeight: 700, cursor: "pointer",
         fontFamily: FONT, letterSpacing: "0.04em", transition: "background .2s",
         width: fullWidth ? "100%" : "auto",
@@ -176,8 +179,8 @@ function GoldButton({ children, onClick, fullWidth }) {
 
 function PersonFallback() {
   return (
-    <div style={{ width: "100%", minHeight: 120, background: "#2a2a2a", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <svg width="44" height="44" viewBox="0 0 44 44" fill="#555">
+    <div style={{ width: "100%", minHeight: 120, background: "#1a1230", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="#4a3a6a">
         <circle cx="22" cy="16" r="9"/>
         <path d="M4 42c0-9.941 8.059-18 18-18s18 8.059 18 18"/>
       </svg>
@@ -193,13 +196,13 @@ function Card({ img, title, subtitle }) {
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
-        background: hov ? "#252525" : "#1e1e1e",
+        background: hov ? "#1a1238" : "#130f2a",
         borderRadius: 10,
-        border: hov ? "1px solid #c8a030" : "1px solid #2e2e2e",
+        border: hov ? "1px solid #a060f5" : "1px solid #2a1a4a",
         overflow: "hidden",
         padding: 0,
         transform: hov ? "translateY(-4px) scale(1.02)" : "translateY(0) scale(1)",
-        boxShadow: hov ? "0 12px 40px rgba(200,160,48,0.18)" : "0 2px 12px rgba(0,0,0,0.3)",
+        boxShadow: hov ? "0 12px 40px rgba(160,96,245,0.22)" : "0 2px 12px rgba(0,0,0,0.4)",
         transition: "transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease",
         cursor: "default",
       }}>
@@ -219,7 +222,7 @@ function Card({ img, title, subtitle }) {
         <div style={{ padding: "24px 28px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div style={{
             fontSize: "clamp(18px,2.5vw,26px)", fontWeight: 700,
-            color: hov ? "#f0c040" : "#fff",
+            color: hov ? "#c080ff" : "#fff",
             marginBottom: 8, fontFamily: FONT,
             transition: "color 0.3s ease",
           }}>{title}</div>
@@ -234,7 +237,7 @@ function PlayThumb({ src, label, sublabel, height = 340 }) {
   return (
     <div style={{ width: "min(600px,90%)", height, borderRadius: 4, overflow: "hidden", position: "relative", cursor: "pointer" }}>
       <img src={src} alt={label} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.5)" }}/>
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,rgba(10,60,45,.5) 0%,rgba(0,0,0,.1) 50%,rgba(100,70,0,.5) 100%)" }}/>
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,rgba(58,80,240,.5) 0%,rgba(128,48,204,.2) 50%,rgba(208,64,190,.5) 100%)" }}/>
       <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ width: 68, height: 68, borderRadius: "50%", border: "3px solid rgba(255,255,255,.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ borderLeft: "24px solid rgba(255,255,255,.9)", borderTop: "14px solid transparent", borderBottom: "14px solid transparent", marginLeft: 6 }}/>
@@ -300,7 +303,7 @@ export default function CaliforniaDreams() {
       <header style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 500, background: BG,
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        padding: "0 24px", height: 72, borderBottom: "1px solid #222",
+        padding: "0 24px", height: 72, borderBottom: "1px solid #2a1a4a",
         boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,.7)" : "none", transition: "box-shadow .3s",
       }}>
         <div style={{ cursor: "pointer" }} onClick={() => goto("hero")}><FilmLogo size={36} /></div>
@@ -319,7 +322,7 @@ export default function CaliforniaDreams() {
               Curta-metragem <span style={{ fontSize: 10 }}>▾</span>
             </button>
             {dropdown && (
-              <div style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, background: "#1a1a1a", border: "1px solid #2e2e2e", minWidth: 170, padding: "6px 0", boxShadow: "0 12px 32px rgba(0,0,0,.7)", borderRadius: 4 }}>
+              <div style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, background: "#130f2a", border: "1px solid #2a1a4a", minWidth: 170, padding: "6px 0", boxShadow: "0 12px 32px rgba(0,0,0,.7)", borderRadius: 4 }}>
                 {[["Sinopse","sinopse"],["Assista","video"],["Elenco","elenco"],["Making Of","making-of"]].map(([l,id]) => (
                   <button key={id} onClick={() => goto(id)}
                     onMouseEnter={e => { e.target.style.color = GOLD; e.target.style.background = "#222"; }}
@@ -352,7 +355,7 @@ export default function CaliforniaDreams() {
           <button key={id} onClick={() => goto(id)}
             onMouseEnter={e => e.currentTarget.style.color = GOLD}
             onMouseLeave={e => e.currentTarget.style.color = "#ccc"}
-            style={{ background: "none", border: "none", cursor: "pointer", fontFamily: FONT, fontSize: 18, fontWeight: 500, color: "#ccc", padding: "10px 0", textAlign: "left", borderBottom: "1px solid #222", width: "100%", transition: "color .2s" }}>
+            style={{ background: "none", border: "none", cursor: "pointer", fontFamily: FONT, fontSize: 18, fontWeight: 500, color: "#ccc", padding: "10px 0", textAlign: "left", borderBottom: "1px solid #2a1a4a", width: "100%", transition: "color .2s" }}>
             {label}
           </button>
         ))}
@@ -362,9 +365,9 @@ export default function CaliforniaDreams() {
       <section id="hero" style={{ marginTop: 72, width: "100%", height: "calc(100vh - 72px)", position: "relative", overflow: "hidden", display: "flex", alignItems: "flex-end", justifyContent: "center", paddingBottom: 64 }}>
         <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1920&q=80&fit=crop"
           alt="hero" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", filter: "brightness(0.6)" }}/>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right,rgba(180,120,0,.75) 0%,rgba(20,20,20,.3) 40%,rgba(10,60,45,.75) 100%)" }}/>
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to top,#111 0%,transparent 100%)" }}/>
-        <h1 className="hero-title" style={{ position: "relative", zIndex: 1, fontWeight: 800, letterSpacing: "0.06em", fontFamily: FONT, background: "linear-gradient(180deg,#f7cc45 0%,#d4980c 50%,#a06412 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", lineHeight: 1, margin: 0, textAlign: "center", padding: "0 20px" }}>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right,rgba(58,80,240,.65) 0%,rgba(128,48,204,.3) 50%,rgba(208,64,190,.65) 100%)" }}/>
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to top,#08061a 0%,transparent 100%)" }}/>
+        <h1 className="hero-title" style={{ position: "relative", zIndex: 1, fontWeight: 800, letterSpacing: "0.06em", fontFamily: FONT, background: "linear-gradient(180deg,#c080ff 0%,#8030cc 50%,#d040be 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", lineHeight: 1, margin: 0, textAlign: "center", padding: "0 20px" }}>
           BÁRBARA
         </h1>
       </section>
@@ -379,7 +382,7 @@ export default function CaliforniaDreams() {
 
       {/* ══ SINOPSE ══ */}
       <section id="sinopse" className="section-pad" style={{ background: BG, textAlign: "center" }}>
-        <SectionTitle>&lt; Sinopse &gt;</SectionTitle>
+        <SectionTitle>Sinopse &gt;</SectionTitle>
         <p style={{ maxWidth: 720, margin: "0 auto 52px", textAlign: "center", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
           ara sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
         </p>
@@ -387,7 +390,7 @@ export default function CaliforniaDreams() {
       </section>
 
       {/* ══ SOBRE A SUN FILMES ══ */}
-      <section style={{ background: "#0e0e0e", borderTop: "1px solid #1e1e1e", borderBottom: "1px solid #1e1e1e" }}>
+      <section style={{ background: BG2, borderTop: "1px solid #2a1a4a", borderBottom: "1px solid #1e1e1e" }}>
         <div className="section-pad" style={{ maxWidth: 1120, margin: "0 auto", display: "flex", alignItems: "center", gap: 64 }}>
           {/* Linha decorativa */}
           <div style={{ width: 4, flexShrink: 0, alignSelf: "stretch", background: `linear-gradient(to bottom, ${GOLD}, transparent)`, borderRadius: 2, minHeight: 120 }}/>
@@ -404,7 +407,7 @@ export default function CaliforniaDreams() {
 
       {/* ══ ELENCO ══ */}
       <section id="elenco" className="section-pad" style={{ background: BG }}>
-        <SectionTitle>&lt; Elenco &gt;</SectionTitle>
+        <SectionTitle>Elenco &gt;</SectionTitle>
         <div className="grid-2" style={{ maxWidth: 1120, margin: "0 auto" }}>
           {castMembers.map((m, i) => (
             <div key={m.role} className="card-anim" style={{ animationDelay: `${i * 0.07}s` }}>
@@ -416,9 +419,8 @@ export default function CaliforniaDreams() {
 
       {/* ══ MAKING OF ══ */}
       <section id="making-of" className="section-pad" style={{ background: BG }}>
-        <SectionTitle subtitle="// Por trás das câmeras...">
-          &lt; Making Of &gt;
-        </SectionTitle>
+        <SectionTitle>
+          Making Of        </SectionTitle>
         {/* Banner */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 40 }}>
           <PlayThumb
@@ -452,8 +454,7 @@ export default function CaliforniaDreams() {
       {/* ══ MEMBROS DA PRODUTORA ══ */}
       <section id="produtora" className="section-pad" style={{ background: BG }}>
         <SectionTitle subtitle="// A equipe que transforma ideias em realidade...">
-          &lt; Membros da Produtora &gt;
-        </SectionTitle>
+          Membros da Produtora        </SectionTitle>
         <div className="grid-2" style={{ maxWidth: 1120, margin: "0 auto" }}>
           {crewMembers.map((m, i) => (
             <div key={m.name} className="card-anim" style={{ animationDelay: `${i * 0.07}s` }}>
@@ -464,15 +465,14 @@ export default function CaliforniaDreams() {
       </section>
 
       {/* ══ PASTA DE PRODUÇÃO ══ */}
-      <section id="pasta" className="section-pad" style={{ background: BG, textAlign: "center", borderTop: "1px solid #1e1e1e" }}>
+      <section id="pasta" className="section-pad" style={{ background: BG, textAlign: "center", borderTop: "1px solid #2a1a4a" }}>
         <SectionTitle subtitle="// Baixe aqui //">
-          &lt; Pasta de Produção &gt;
-        </SectionTitle>
+          Pasta de Produção        </SectionTitle>
         <GoldButton>Baixar</GoldButton>
       </section>
 
       {/* ══ FOOTER ══ */}
-      <footer style={{ background: "#161616", borderTop: "1px solid #222" }}>
+      <footer style={{ background: BG3, borderTop: "1px solid #2a1a4a" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px 48px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 40, alignItems: "start", justifyItems: "center", textAlign: "center" }}>
 
           {/* Col 1: Logo + descripción */}
@@ -492,7 +492,7 @@ export default function CaliforniaDreams() {
               <a href="https://www.instagram.com/sun_filmess?igsh=amVrMXo0eGt5dm51" target="_blank" rel="noreferrer"
                 onMouseEnter={e => e.currentTarget.style.background = GOLD}
                 onMouseLeave={e => e.currentTarget.style.background = "#2a2a2a"}
-                style={{ width: 44, height: 44, borderRadius: "50%", background: "#2a2a2a", display: "flex", alignItems: "center", justifyContent: "center", transition: "background .25s", border: "1px solid #333" }}>
+                style={{ width: 44, height: 44, borderRadius: "50%", background: "#1a1238", display: "flex", alignItems: "center", justifyContent: "center", transition: "background .25s", border: "1px solid #3a2060" }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5"/>
                   <circle cx="12" cy="12" r="5"/>
@@ -503,7 +503,7 @@ export default function CaliforniaDreams() {
               <a href="https://www.youtube.com/@sun_filmess" target="_blank" rel="noreferrer"
                 onMouseEnter={e => e.currentTarget.style.background = GOLD}
                 onMouseLeave={e => e.currentTarget.style.background = "#2a2a2a"}
-                style={{ width: 44, height: 44, borderRadius: "50%", background: "#2a2a2a", display: "flex", alignItems: "center", justifyContent: "center", transition: "background .25s", border: "1px solid #333" }}>
+                style={{ width: 44, height: 44, borderRadius: "50%", background: "#1a1238", display: "flex", alignItems: "center", justifyContent: "center", transition: "background .25s", border: "1px solid #3a2060" }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
                   <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
                   <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#161616"/>
@@ -542,8 +542,8 @@ export default function CaliforniaDreams() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: "1px solid #222", padding: "20px 24px", textAlign: "center", color: "#444", fontSize: 13, fontFamily: FONT }}>
-          © 2024 California Dreams. Todos os direitos reservados.
+        <div style={{ borderTop: "1px solid #2a1a4a", padding: "20px 24px", textAlign: "center", color: "#444", fontSize: 13, fontFamily: FONT }}>
+          © 2026 Sun Films. Todos os direitos reservados.
         </div>
       </footer>
 
@@ -585,8 +585,8 @@ export default function CaliforniaDreams() {
       {/* Scroll to top */}
       {showTop && (
         <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          style={{ position: "fixed", bottom: 28, right: 28, zIndex: 400, width: 44, height: 44, borderRadius: "50%", background: GOLD, border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 20px rgba(0,0,0,.5)" }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          style={{ position: "fixed", bottom: 28, right: 28, zIndex: 400, width: 44, height: 44, borderRadius: "50%", background: GRAD, border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 20px rgba(160,96,245,.4)" }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="18 15 12 9 6 15"/>
           </svg>
         </button>

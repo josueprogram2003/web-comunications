@@ -122,16 +122,6 @@ const crewMembers = [
   { name: "Nicolly Laubaka", role: "Produção e auxiliar de maquiagem",               img: "/DSC09912.jpg.jpeg" },
 ];
 
-const makingOfPhotos = [
-  "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1500210600724-a19cd71e7ee3?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=280&fit=crop",
-  "https://images.unsplash.com/photo-1503095396549-807759245b35?w=400&h=280&fit=crop",
-];
 
 /* ════════════════ COMPONENTS ════════════════ */
 
@@ -253,6 +243,31 @@ function PlayThumb({ src, label, sublabel, height = 340 }) {
   );
 }
 
+function FreeTrial() {
+  const [hov, setHov] = useState(false);
+  return (
+    <button
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        background: hov ? GRAD : "transparent",
+        color: hov ? "#fff" : "#fff",
+        border: "2px solid rgba(255,255,255,0.5)",
+        borderRadius: 999,
+        padding: "8px 22px",
+        fontSize: 14,
+        fontWeight: 600,
+        fontFamily: FONT,
+        cursor: "pointer",
+        letterSpacing: "0.03em",
+        transition: "background .25s, border .25s",
+        whiteSpace: "nowrap",
+      }}>
+      Free Trial
+    </button>
+  );
+}
+
 /* ════════════════ MAIN ════════════════ */
 export default function CaliforniaDreams() {
   const [menuOpen,  setMenuOpen]  = useState(false);
@@ -336,6 +351,9 @@ export default function CaliforniaDreams() {
           {navBtn("Pasta de Produção","pasta")}
         </nav>
 
+        {/* Free Trial button */}
+        <FreeTrial />
+
         {/* Hamburger button (mobile) */}
         <button className="hamburger"
           onClick={() => setMenuOpen(o => !o)}
@@ -387,15 +405,20 @@ export default function CaliforniaDreams() {
       </section>
 
       {/* ══ SOBRE A SUN FILMES ══ */}
-      <section style={{ background: BG2, borderTop: "1px solid #2a1a4a", borderBottom: "1px solid #1e1e1e" }}>
+      <section style={{ background: BG2, borderTop: "1px solid #2a1a4a", borderBottom: "1px solid #2a1a4a" }}>
         <div className="section-pad" style={{ maxWidth: 1120, margin: "0 auto", display: "flex", alignItems: "center", gap: 64 }}>
-          {/* Linha decorativa */}
-          <div style={{ width: 4, flexShrink: 0, alignSelf: "stretch", background: `linear-gradient(to bottom, ${GOLD}, transparent)`, borderRadius: 2, minHeight: 120 }}/>
+          {/* Logo grande */}
+          <div style={{ flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img src="/blanco.png" alt="Sun Films" style={{ width: "clamp(120px, 14vw, 200px)", height: "auto", opacity: 0.95, filter: "drop-shadow(0 0 24px rgba(160,96,245,0.4))" }}/>
+          </div>
+          {/* Divisor */}
+          <div style={{ width: 1, alignSelf: "stretch", background: `linear-gradient(to bottom, transparent, ${GOLD}, transparent)`, flexShrink: 0, minHeight: 100 }}/>
+          {/* Texto */}
           <div>
-            <h2 style={{ fontFamily: FONT, fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, color: "#fff", lineHeight: 1.2, marginBottom: 24 }}>
+            <h2 style={{ fontFamily: FONT, fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, color: "#fff", lineHeight: 1.2, marginBottom: 20 }}>
               Sun Films
             </h2>
-            <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.6vw,18px)", color: "#aaa", lineHeight: 1.9, maxWidth: 780 }}>
+            <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.6vw,18px)", color: "#aaa", lineHeight: 1.9, maxWidth: 680 }}>
               A <strong style={{ color: "#fff" }}>Sun Filmes</strong> reúne diferentes olhares, experiências e formas de criar em torno de um mesmo propósito: contar histórias por meio do audiovisual. Acreditamos que a criatividade nasce da diversidade e que cada produção é uma oportunidade de transformar ideias em experiências significativas.
             </p>
           </div>
@@ -434,17 +457,6 @@ export default function CaliforniaDreams() {
             </svg>
             Mirar en YouTube
           </a>
-        </div>
-        {/* Photo grid */}
-        <div className="grid-4" style={{ maxWidth: 1120, margin: "0 auto" }}>
-          {makingOfPhotos.map((src, i) => (
-            <div key={i} style={{ height: 180, overflow: "hidden", borderRadius: 4 }}>
-              <img src={src} alt={`making of ${i+1}`}
-                style={{ width: "100%", height: "100%", objectFit: "cover", filter: i % 3 === 0 ? "grayscale(80%)" : "none", transition: "transform .3s" }}
-                onMouseEnter={e => e.target.style.transform = "scale(1.05)"}
-                onMouseLeave={e => e.target.style.transform = "scale(1)"}/>
-            </div>
-          ))}
         </div>
       </section>
 

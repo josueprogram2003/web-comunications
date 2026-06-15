@@ -400,7 +400,7 @@ export default function CaliforniaDreams() {
       <section id="sinopse" className="section-pad" style={{ background: BG, textAlign: "center" }}>
         <SectionTitle>Sinopse</SectionTitle>
         <p style={{ maxWidth: 720, margin: "0 auto 52px", textAlign: "center", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
-          ara sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
+          Para sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
         </p>
         <GoldButton onClick={() => goto("video")}>Veja Agora</GoldButton>
       </section>

@@ -455,14 +455,6 @@ export default function CaliforniaDreams() {
           ))}
         </div>
       </section>
-      {/* ══ PASTA DE PRODUÇÃO ══ */}
-      <section id="pasta" className="section-pad" style={{ background: BG, borderTop: "1px solid #2a1a4a" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 40 }}>
-          <SectionTitle>Pasta de Produção</SectionTitle>
-          <GoldButton onClick={() => window.open("https://drive.google.com/drive/folders/13gqbhf3LmVw2VitmACWu9XbIRmSWLOZ-?usp=sharing", "_blank")}>Veja Agora</GoldButton>
-        </div>
-      </section>
-
       {/* ══ PESQUISA ══ */}
       <section id="pesquisa" className="section-pad" style={{ background: BG2, borderTop: "1px solid #2a1a4a", borderBottom: "1px solid #2a1a4a" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -492,6 +484,14 @@ export default function CaliforniaDreams() {
           <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.8vw,18px)", color: "#ccc", lineHeight: 1.85, textAlign: "justify", marginTop: 20 }}>
             Os resultados indicam que, embora a inteligência artificial possa oferecer benefícios e apoio momentâneo, ela não substitui as relações humanas nem o acompanhamento psicológico profissional. Dessa forma, seu uso deve ser compreendido como um recurso complementar, preservando a importância das conexões humanas para a saúde emocional e o bem-estar.
           </p>
+        </div>
+      </section>
+
+      {/* ══ PASTA DE PRODUÇÃO ══ */}
+      <section id="pasta" className="section-pad" style={{ background: BG, borderTop: "1px solid #2a1a4a" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 40 }}>
+          <SectionTitle>Pasta de Produção</SectionTitle>
+          <GoldButton onClick={() => window.open("https://drive.google.com/drive/folders/13gqbhf3LmVw2VitmACWu9XbIRmSWLOZ-?usp=sharing", "_blank")}>Veja Agora</GoldButton>
         </div>
       </section>
 

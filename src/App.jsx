@@ -436,15 +436,11 @@ export default function CaliforniaDreams() {
             src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=800&h=320&fit=crop"
             label="MAKING OF" height={200}/>
         </div>
-        {/* YouTube button */}
+        {/* Veja Agora button */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 48 }}>
           <a href="https://youtube.com" target="_blank" rel="noreferrer"
-            style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#1e1e1e", color: "#fff", textDecoration: "none", padding: "12px 28px", borderRadius: 4, fontFamily: FONT, fontSize: 14, fontWeight: 600 }}>
-            <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-              <rect width="22" height="16" rx="4" fill="#FF0000"/>
-              <polygon points="9,4 9,12 16,8" fill="white"/>
-            </svg>
-            Mirar en YouTube
+            style={{ display: "inline-flex", alignItems: "center", background: "#a060f5", color: "#fff", textDecoration: "none", padding: "14px 36px", borderRadius: 10, fontFamily: FONT, fontSize: 16, fontWeight: 700, letterSpacing: "0.02em", boxShadow: "0 4px 24px rgba(160,96,245,0.4)" }}>
+            Veja Agora
           </a>
         </div>
       </section>
@@ -489,10 +485,6 @@ export default function CaliforniaDreams() {
           <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.8vw,18px)", color: "#ccc", lineHeight: 1.85, textAlign: "justify", marginTop: 20 }}>
             Os resultados indicam que, embora a inteligência artificial possa oferecer benefícios e apoio momentâneo, ela não substitui as relações humanas nem o acompanhamento psicológico profissional. Dessa forma, seu uso deve ser compreendido como um recurso complementar, preservando a importância das conexões humanas para a saúde emocional e o bem-estar.
           </p>
-
-          <div style={{ marginTop: 48, borderRadius: 12, overflow: "hidden", border: "1px solid #2a1a4a" }}>
-            <img src="/TERMOS DE USO_2.png" alt="Termos de Uso" style={{ width: "100%", height: "auto", display: "block" }} />
-          </div>
         </div>
       </section>
 

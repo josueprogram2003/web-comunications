@@ -112,17 +112,17 @@ const castMembers = [
 ];
 
 const crewMembers = [
-  { name: "Vitória Gomes",    role: "Diretor e direção de fotografia",                img: "/DSC09599.jpg.jpeg" },
-  { name: "Bruno Gonçalves", role: "Diretor e direção executiva",                    img: "/DSC09665.jpg.jpeg" },
-  { name: "William Thompson", role: "Direção de atores e roteirista",                 img: "/DSC09731.jpg.jpeg" },
-  { name: "Hesek Boñon",   role: "Diretor de produção",                            img: "/DSC09812.jpg.jpeg" },
-  { name: "Roberto Lima",  role: "Diretora de artes e cenografia",                 img: "/DSC09839.jpg.jpeg" },
-  { name: "João Crepaldi",       role: "Diretor de áudio, sound effects e sound design", img: "/DSC09866.jpg.jpeg" },
-  { name: "Catalina Olarte",    role: "Edição, captação e visual effects",              img: "/DSC09887.jpg.jpeg" },
-  { name: "Jessie Hernández", role: "Produção e auxiliar de maquiagem",               img: "/DSC09912.jpg.jpeg" },
-  { name: "Yasmín Olivera",  role: "",                                               img: "/DSC098754.jpeg" },
-  { name: "Keren Pautt",     role: "",                                               img: "/DSC025874.jpeg" },
-  { name: "Isabela Brito",   role: "",                                               img: "/ISABELA_BRITO.jpeg" },
+  { name: "Vitória Gomes",    role: "Assistente de direção de arte, maquiagem",                img: "/DSC09599.jpg.jpeg" },
+  { name: "Bruno Gonçalves", role: "Producción Ejecutiva",                    img: "/DSC09665.jpg.jpeg" },
+  { name: "William Thompson", role: "Captação de áudio",                 img: "/DSC09731.jpg.jpeg" },
+  { name: "Hesek Boñon",   role: "Pesquisa e assistente de produção",                            img: "/DSC09812.jpg.jpeg" },
+  { name: "Roberto Lima",  role: "Gaffer",                 img: "/DSC09839.jpg.jpeg" },
+  { name: "João Crepaldi",       role: "Director de Fotografía", img: "/DSC09866.jpg.jpeg" },
+  { name: "Catalina Olarte",    role: "Diretora, editora e VFX",              img: "/DSC09887.jpg.jpeg" },
+  { name: "Jessie Hernández", role: "Producción General e Making Of",               img: "/DSC09912.jpg.jpeg" },
+  { name: "Yasmín Olivera",  role: "Roteirista, Assistente de produção",                                               img: "/DSC098754.jpeg" },
+  { name: "Keren Pautt",     role: "Roteirista, Captação de Making Of, Assistente de produção",                                               img: "/DSC025874.jpeg" },
+  { name: "Isabela Brito",   role: "Direção de Arte",                                               img: "/ISABELA_BRITO.jpeg" },
 ];
 
 

@@ -438,7 +438,7 @@ export default function CaliforniaDreams() {
         </div>
         {/* Veja Agora button */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 48 }}>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer"
+          <a href="https://youtu.be/Lu-lkV2pUBM" target="_blank" rel="noreferrer"
             style={{ display: "inline-flex", alignItems: "center", background: "#a060f5", color: "#fff", textDecoration: "none", padding: "14px 36px", borderRadius: 10, fontFamily: FONT, fontSize: 16, fontWeight: 700, letterSpacing: "0.02em", boxShadow: "0 4px 24px rgba(160,96,245,0.4)" }}>
             Veja Agora
           </a>

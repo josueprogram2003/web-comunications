@@ -112,14 +112,16 @@ const castMembers = [
 ];
 
 const crewMembers = [
-  { name: "Gabson Silva",    role: "Diretor e direção de fotografia",                img: "/DSC09599.jpg.jpeg" },
-  { name: "Thiago Bandeira", role: "Diretor e direção executiva",                    img: "/DSC09665.jpg.jpeg" },
-  { name: "Gabriel Candido", role: "Direção de atores e roteirista",                 img: "/DSC09731.jpg.jpeg" },
-  { name: "Paulo Santana",   role: "Diretor de produção",                            img: "/DSC09812.jpg.jpeg" },
-  { name: "Gabriela Silva",  role: "Diretora de artes e cenografia",                 img: "/DSC09839.jpg.jpeg" },
-  { name: "Sebastian",       role: "Diretor de áudio, sound effects e sound design", img: "/DSC09866.jpg.jpeg" },
-  { name: "Alex Gabriel",    role: "Edição, captação e visual effects",              img: "/DSC09887.jpg.jpeg" },
-  { name: "Nicolly Laubaka", role: "Produção e auxiliar de maquiagem",               img: "/DSC09912.jpg.jpeg" },
+  { name: "Vitória Gomes",    role: "Diretor e direção de fotografia",                img: "/DSC09599.jpg.jpeg" },
+  { name: "Bruno Gonçalves", role: "Diretor e direção executiva",                    img: "/DSC09665.jpg.jpeg" },
+  { name: "William Thompson", role: "Direção de atores e roteirista",                 img: "/DSC09731.jpg.jpeg" },
+  { name: "Hesek Boñon",   role: "Diretor de produção",                            img: "/DSC09812.jpg.jpeg" },
+  { name: "Roberto Lima",  role: "Diretora de artes e cenografia",                 img: "/DSC09839.jpg.jpeg" },
+  { name: "João Crepaldi",       role: "Diretor de áudio, sound effects e sound design", img: "/DSC09866.jpg.jpeg" },
+  { name: "Catalina Olarte",    role: "Edição, captação e visual effects",              img: "/DSC09887.jpg.jpeg" },
+  { name: "Jessie Hernández", role: "Produção e auxiliar de maquiagem",               img: "/DSC09912.jpg.jpeg" },
+  { name: "Yasmín Olivera",  role: "",                                               img: "/DSC098754.jpeg" },
+  { name: "Keren Pautt",     role: "",                                               img: "/DSC025874.jpeg" },
 ];
 
 
@@ -200,7 +202,7 @@ function Card({ img, title, subtitle }) {
             ? <PersonFallback />
             : <img src={img} alt={title} onError={() => setErr(true)}
                 style={{
-                  width: "100%", height: "100%", objectFit: "cover", display: "block",
+                  width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", display: "block",
                   transform: hov ? "scale(1.08)" : "scale(1)",
                   transition: "transform 0.4s ease",
                 }}/>
@@ -263,7 +265,7 @@ function FreeTrial() {
         transition: "background .25s, border .25s",
         whiteSpace: "nowrap",
       }}>
-      Free Trial
+      veja agora
     </button>
   );
 }
@@ -425,18 +427,6 @@ export default function CaliforniaDreams() {
         </div>
       </section>
 
-      {/* ══ ELENCO ══ */}
-      <section id="elenco" className="section-pad" style={{ background: BG }}>
-        <SectionTitle>Elenco</SectionTitle>
-        <div className="grid-2" style={{ maxWidth: 1120, margin: "0 auto" }}>
-          {castMembers.map((m, i) => (
-            <div key={m.role} className="card-anim" style={{ animationDelay: `${i * 0.07}s` }}>
-              <Card img={m.img} title={m.role} subtitle={m.actor}/>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ══ MAKING OF ══ */}
       <section id="making-of" className="section-pad" style={{ background: BG }}>
         <SectionTitle>
@@ -462,8 +452,7 @@ export default function CaliforniaDreams() {
 
       {/* ══ MEMBROS DA PRODUTORA ══ */}
       <section id="produtora" className="section-pad" style={{ background: BG }}>
-        <SectionTitle subtitle="// A equipe que transforma ideias em realidade...">
-          Membros da Produtora        </SectionTitle>
+        <SectionTitle>Membros da Produtora</SectionTitle>
         <div className="grid-2" style={{ maxWidth: 1120, margin: "0 auto" }}>
           {crewMembers.map((m, i) => (
             <div key={m.name} className="card-anim" style={{ animationDelay: `${i * 0.07}s` }}>

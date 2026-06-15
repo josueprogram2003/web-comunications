@@ -392,7 +392,7 @@ export default function CaliforniaDreams() {
         <PlayThumb
           src="/PORTADA.png"
           label="TEASER" height={200}/>
-        <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=qBtpMlnyAV4", "_blank")}>Veja Agora</GoldButton>
+        <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=TR4nblkwd2A", "_blank")}>Veja Agora</GoldButton>
       </section>
 
       {/* ══ SINOPSE ══ */}
@@ -401,7 +401,7 @@ export default function CaliforniaDreams() {
         <p style={{ maxWidth: 720, margin: "0 auto 52px", textAlign: "center", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
           Para sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
         </p>
-        <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=TR4nblkwd2A", "_blank")}>Veja Agora</GoldButton>
+        <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=qBtpMlnyAV4", "_blank")}>Veja Agora</GoldButton>
       </section>
 
       {/* ══ SOBRE A SUN FILMES ══ */}

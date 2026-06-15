@@ -304,8 +304,8 @@ export default function CaliforniaDreams() {
         boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,.7)" : "none", transition: "box-shadow .3s",
       }}>
         <div style={{ cursor: "pointer" }} onClick={() => goto("hero")}><FilmLogo size={36} /></div>
-        {/* Desktop nav */}
-        <nav className="nav-desktop">
+        {/* Desktop nav — centrado absolutamente */}
+        <nav className="nav-desktop" style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}>
           {navBtn("Início",  "hero")}
           {navBtn("Teaser",  "teaser")}
 
@@ -380,27 +380,24 @@ export default function CaliforniaDreams() {
       {/* ══ SINOPSE ══ */}
       <section id="sinopse" className="section-pad" style={{ background: BG, textAlign: "center" }}>
         <SectionTitle>&lt; Sinopse &gt;</SectionTitle>
-        <div className="grid-sinopse" style={{ maxWidth: 1120, margin: "0 auto 52px", textAlign: "left", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
-          <p>Bárbara, uma agente secreta determinada e altamente treinada, acredita firmemente em sua missão de justiça. Com uma coragem inabalável, ela se infiltra em um perigoso esquema de tráfico de mulheres. Em meio a um mundo sombrio e cheio de perigos, Bárbara enfrenta criminosos implacáveis e desafios inesperados. Usando sua inteligência e habilidades de combate, ela trabalha incansavelmente para desmantelar a organização cruel e salvar as mulheres de um destino terrível. Durante essa</p>
-          <p>missão arriscada, Bárbara também se depara com conflitos internos e dilemas morais que testam seus limites. No centro dessa organização cruel está Castro, o astuto e implacável chefe, cuja ambição e crueldade não conhecem limites. Ele fará de tudo para frustrar os planos de Bárbara. Consciente da ameaça que ela representa, Castro sente-se compelido a empregar todos os recursos e estratégias possíveis para impedir suas ações a qualquer custo.</p>
-        </div>
+        <p style={{ maxWidth: 720, margin: "0 auto 52px", textAlign: "center", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
+          ara sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
+        </p>
         <GoldButton onClick={() => goto("video")}>Veja Agora</GoldButton>
       </section>
 
-      {/* ══ CURTA VIDEO ══ */}
-      <section id="video" className="section-pad" style={{ background: BG, display: "flex", justifyContent: "center" }}>
-        <div style={{ width: "min(600px,92%)", height: "clamp(200px,40vw,340px)", borderRadius: 4, overflow: "hidden", position: "relative", cursor: "pointer" }}>
-          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=450&fit=crop&q=80"
-            alt="Bárbara curta" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.5)" }}/>
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,rgba(10,60,45,.55) 0%,rgba(0,0,0,.1) 50%,rgba(100,70,0,.55) 100%)" }}/>
-          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ width: 72, height: 72, borderRadius: "50%", border: "3px solid rgba(255,255,255,.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <div style={{ borderLeft: "26px solid rgba(255,255,255,.9)", borderTop: "15px solid transparent", borderBottom: "15px solid transparent", marginLeft: 6 }}/>
-            </div>
-          </div>
-          <div style={{ position: "absolute", bottom: 20, right: 24, textAlign: "right" }}>
-            <div style={{ fontSize: "clamp(24px,5vw,40px)", fontWeight: 800, fontFamily: FONT, background: "linear-gradient(180deg,#f7cc45,#d4980c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>BÁRBARA</div>
-            <div style={{ fontSize: 13, color: "#ccc", fontFamily: FONT }}>Curta-metragem</div>
+      {/* ══ SOBRE A SUN FILMES ══ */}
+      <section style={{ background: "#0e0e0e", borderTop: "1px solid #1e1e1e", borderBottom: "1px solid #1e1e1e" }}>
+        <div className="section-pad" style={{ maxWidth: 1120, margin: "0 auto", display: "flex", alignItems: "center", gap: 64 }}>
+          {/* Linha decorativa */}
+          <div style={{ width: 4, flexShrink: 0, alignSelf: "stretch", background: `linear-gradient(to bottom, ${GOLD}, transparent)`, borderRadius: 2, minHeight: 120 }}/>
+          <div>
+            <h2 style={{ fontFamily: FONT, fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, color: "#fff", lineHeight: 1.2, marginBottom: 24 }}>
+              Sun Films
+            </h2>
+            <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.6vw,18px)", color: "#aaa", lineHeight: 1.9, maxWidth: 780 }}>
+              A <strong style={{ color: "#fff" }}>Sun Filmes</strong> reúne diferentes olhares, experiências e formas de criar em torno de um mesmo propósito: contar histórias por meio do audiovisual. Acreditamos que a criatividade nasce da diversidade e que cada produção é uma oportunidade de transformar ideias em experiências significativas.
+            </p>
           </div>
         </div>
       </section>

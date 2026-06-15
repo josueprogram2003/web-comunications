@@ -112,17 +112,14 @@ const castMembers = [
 ];
 
 const crewMembers = [
-  { name: "Gabson Silva",    role: "Diretor e direção de fotografia",                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Thiago Bandeira", role: "Diretor e direção executiva",                    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Gabriel Candido", role: "Direção de atores e roteirista",                 img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Paulo Santana",   role: "Diretor de produção",                            img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Gabriela Silva",  role: "Diretora de artes e cenografia",                 img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Sebastian",       role: "Diretor de áudio, sound effects e sound design", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Alex Gabriel",    role: "Edição, captação e visual effects",              img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Nicolly Laubaka", role: "Produção e auxiliar de maquiagem",               img: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Miquéias Santos", role: "Marketing e making of",                          img: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Nicoli Vieira",   role: "Maquiadora e pasta de produção",                 img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=220&fit=crop&crop=faces" },
-  { name: "Laura Vital",     role: "Roteirista",                                     img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=220&fit=crop&crop=faces" },
+  { name: "Gabson Silva",    role: "Diretor e direção de fotografia",                img: "/DSC09599.jpg.jpeg" },
+  { name: "Thiago Bandeira", role: "Diretor e direção executiva",                    img: "/DSC09665.jpg.jpeg" },
+  { name: "Gabriel Candido", role: "Direção de atores e roteirista",                 img: "/DSC09731.jpg.jpeg" },
+  { name: "Paulo Santana",   role: "Diretor de produção",                            img: "/DSC09812.jpg.jpeg" },
+  { name: "Gabriela Silva",  role: "Diretora de artes e cenografia",                 img: "/DSC09839.jpg.jpeg" },
+  { name: "Sebastian",       role: "Diretor de áudio, sound effects e sound design", img: "/DSC09866.jpg.jpeg" },
+  { name: "Alex Gabriel",    role: "Edição, captação e visual effects",              img: "/DSC09887.jpg.jpeg" },
+  { name: "Nicolly Laubaka", role: "Produção e auxiliar de maquiagem",               img: "/DSC09912.jpg.jpeg" },
 ];
 
 const makingOfPhotos = [
@@ -368,7 +365,7 @@ export default function CaliforniaDreams() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right,rgba(58,80,240,.65) 0%,rgba(128,48,204,.3) 50%,rgba(208,64,190,.65) 100%)" }}/>
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to top,#08061a 0%,transparent 100%)" }}/>
         <h1 className="hero-title" style={{ position: "relative", zIndex: 1, fontWeight: 800, letterSpacing: "0.06em", fontFamily: FONT, background: "linear-gradient(180deg,#c080ff 0%,#8030cc 50%,#d040be 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", lineHeight: 1, margin: 0, textAlign: "center", padding: "0 20px" }}>
-          BÁRBARA
+          TERMOS DE USO
         </h1>
       </section>
 
@@ -382,7 +379,7 @@ export default function CaliforniaDreams() {
 
       {/* ══ SINOPSE ══ */}
       <section id="sinopse" className="section-pad" style={{ background: BG, textAlign: "center" }}>
-        <SectionTitle>Sinopse &gt;</SectionTitle>
+        <SectionTitle>Sinopse</SectionTitle>
         <p style={{ maxWidth: 720, margin: "0 auto 52px", textAlign: "center", fontSize: "clamp(16px,1.8vw,20px)", lineHeight: 1.9, color: "#bbb", fontFamily: FONT }}>
           ara sobreviver à pressão do esporte de elite, uma jovem atleta vicia-se em um aplicativo capaz de apagar suas emoções. Mas quando a tecnologia começa a falhar às vésperas do maior campeonato de sua vida, o custo da perfeição artificial se revela um verdadeiro pesadelo.
         </p>
@@ -407,7 +404,7 @@ export default function CaliforniaDreams() {
 
       {/* ══ ELENCO ══ */}
       <section id="elenco" className="section-pad" style={{ background: BG }}>
-        <SectionTitle>Elenco &gt;</SectionTitle>
+        <SectionTitle>Elenco</SectionTitle>
         <div className="grid-2" style={{ maxWidth: 1120, margin: "0 auto" }}>
           {castMembers.map((m, i) => (
             <div key={m.role} className="card-anim" style={{ animationDelay: `${i * 0.07}s` }}>

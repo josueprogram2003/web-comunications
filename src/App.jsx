@@ -337,15 +337,17 @@ export default function CaliforniaDreams() {
               Curta-metragem <span style={{ fontSize: 10 }}>▾</span>
             </button>
             {dropdown && (
-              <div style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, background: "#130f2a", border: "1px solid #2a1a4a", minWidth: 170, padding: "6px 0", boxShadow: "0 12px 32px rgba(0,0,0,.7)", borderRadius: 4 }}>
-                {[["Sinopse","sinopse"],["Assista","video"],["Elenco","elenco"],["Making Of","making-of"]].map(([l,id]) => (
-                  <button key={id} onClick={() => goto(id)}
-                    onMouseEnter={e => { e.target.style.color = GOLD; e.target.style.background = "#222"; }}
-                    onMouseLeave={e => { e.target.style.color = "#fff"; e.target.style.background = "none"; }}
-                    style={{ display: "block", width: "100%", textAlign: "left", padding: "10px 20px", background: "none", border: "none", color: "#fff", fontSize: 14, cursor: "pointer", fontFamily: FONT }}>
-                    {l}
-                  </button>
-                ))}
+              <div style={{ position: "absolute", top: "100%", left: 0, paddingTop: 8, zIndex: 999 }}>
+                <div style={{ background: "#130f2a", border: "1px solid #2a1a4a", minWidth: 170, padding: "6px 0", boxShadow: "0 12px 32px rgba(0,0,0,.7)", borderRadius: 4 }}>
+                  {[["Sinopse","sinopse"],["Making Of","making-of"]].map(([l,id]) => (
+                    <button key={id} onClick={() => goto(id)}
+                      onMouseEnter={e => { e.target.style.color = GOLD; e.target.style.background = "#222"; }}
+                      onMouseLeave={e => { e.target.style.color = "#fff"; e.target.style.background = "none"; }}
+                      style={{ display: "block", width: "100%", textAlign: "left", padding: "10px 20px", background: "none", border: "none", color: "#fff", fontSize: 14, cursor: "pointer", fontFamily: FONT }}>
+                      {l}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
           </div>

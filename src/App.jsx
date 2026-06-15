@@ -250,6 +250,7 @@ function FreeTrial() {
   const [hov, setHov] = useState(false);
   return (
     <button
+      onClick={() => window.open("https://www.youtube.com/watch?v=qBtpMlnyAV4", "_blank")}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{

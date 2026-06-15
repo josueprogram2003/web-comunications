@@ -463,14 +463,6 @@ export default function CaliforniaDreams() {
           ))}
         </div>
       </section>
-
-      {/* ══ PASTA DE PRODUÇÃO ══ */}
-      <section id="pasta" className="section-pad" style={{ background: BG, textAlign: "center", borderTop: "1px solid #2a1a4a" }}>
-        <SectionTitle subtitle="// Baixe aqui //">
-          Pasta de Produção        </SectionTitle>
-        <GoldButton>Baixar</GoldButton>
-      </section>
-
       {/* ══ FOOTER ══ */}
       <footer style={{ background: BG3, borderTop: "1px solid #2a1a4a" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px 48px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 40, alignItems: "start", justifyItems: "center", textAlign: "center" }}>

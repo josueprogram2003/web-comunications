@@ -458,6 +458,38 @@ export default function CaliforniaDreams() {
           ))}
         </div>
       </section>
+      {/* ══ PESQUISA ══ */}
+      <section id="pesquisa" className="section-pad" style={{ background: BG2, borderTop: "1px solid #2a1a4a", borderBottom: "1px solid #2a1a4a" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <SectionTitle>Pesquisa</SectionTitle>
+
+          {/* Stats row */}
+          <div style={{ display: "flex", gap: 24, flexWrap: "wrap", justifyContent: "center", marginBottom: 48 }}>
+            {[
+              { num: "71", label: "participantes na pesquisa" },
+              { num: "~25%", label: "sentiram acolhimento emocional com IA" },
+              { num: "~20%", label: "usam IA para falar de emoções pessoais" },
+            ].map(s => (
+              <div key={s.num} style={{ flex: "1 1 200px", maxWidth: 260, background: BG3, border: "1px solid #2a1a4a", borderRadius: 12, padding: "28px 20px", textAlign: "center" }}>
+                <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: "clamp(32px,5vw,48px)", background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 8 }}>{s.num}</div>
+                <div style={{ fontFamily: FONT, fontSize: 14, color: "#aaa", lineHeight: 1.5 }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Body text */}
+          <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.8vw,18px)", color: "#ccc", lineHeight: 1.85, textAlign: "justify" }}>
+            A inteligência artificial tem se tornado cada vez mais presente no cotidiano, influenciando a forma como as pessoas se comunicam, buscam informações e lidam com suas emoções. Com o avanço dos sistemas conversacionais, muitos usuários passaram a recorrer a essas ferramentas em busca de orientação, acolhimento ou apoio emocional.
+          </p>
+          <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.8vw,18px)", color: "#ccc", lineHeight: 1.85, textAlign: "justify", marginTop: 20 }}>
+            De acordo com a pesquisa realizada com 71 participantes, uma parcela significativa dos entrevistados afirmou ocultar emoções ou aspectos da própria personalidade para se adaptar socialmente. Além disso, cerca de um quarto dos participantes relatou sentir algum grau de acolhimento emocional ao interagir com inteligências artificiais, e aproximadamente 20% afirmou utilizá-las ocasionalmente para falar sobre emoções e dificuldades pessoais.
+          </p>
+          <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.8vw,18px)", color: "#ccc", lineHeight: 1.85, textAlign: "justify", marginTop: 20 }}>
+            Os resultados indicam que, embora a inteligência artificial possa oferecer benefícios e apoio momentâneo, ela não substitui as relações humanas nem o acompanhamento psicológico profissional. Dessa forma, seu uso deve ser compreendido como um recurso complementar, preservando a importância das conexões humanas para a saúde emocional e o bem-estar.
+          </p>
+        </div>
+      </section>
+
       {/* ══ FOOTER ══ */}
       <footer style={{ background: BG3, borderTop: "1px solid #2a1a4a" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px 48px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 40, alignItems: "start", justifyItems: "center", textAlign: "center" }}>

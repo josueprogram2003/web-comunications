@@ -408,17 +408,17 @@ export default function CaliforniaDreams() {
         <div className="section-pad" style={{ maxWidth: 1120, margin: "0 auto", display: "flex", alignItems: "center", gap: 64 }}>
           {/* Logo grande */}
           <div style={{ flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <img src="/blanco.png" alt="Sun Films" style={{ width: "clamp(120px, 14vw, 200px)", height: "auto", opacity: 0.95, filter: "drop-shadow(0 0 24px rgba(160,96,245,0.4))" }}/>
+            <img src="/blanco.png" alt="SUN FILMES" style={{ width: "clamp(120px, 14vw, 200px)", height: "auto", opacity: 0.95, filter: "drop-shadow(0 0 24px rgba(160,96,245,0.4))" }}/>
           </div>
           {/* Divisor */}
           <div style={{ width: 1, alignSelf: "stretch", background: `linear-gradient(to bottom, transparent, ${GOLD}, transparent)`, flexShrink: 0, minHeight: 100 }}/>
           {/* Texto */}
           <div>
             <h2 style={{ fontFamily: FONT, fontSize: "clamp(28px,4vw,48px)", fontWeight: 800, color: "#fff", lineHeight: 1.2, marginBottom: 20 }}>
-              Sun Films
+              SUN FILMES
             </h2>
             <p style={{ fontFamily: FONT, fontSize: "clamp(15px,1.6vw,18px)", color: "#aaa", lineHeight: 1.9, maxWidth: 680 }}>
-              A <strong style={{ color: "#fff" }}>Sun Filmes</strong> reúne diferentes olhares, experiências e formas de criar em torno de um mesmo propósito: contar histórias por meio do audiovisual. Acreditamos que a criatividade nasce da diversidade e que cada produção é uma oportunidade de transformar ideias em experiências significativas.
+              A <strong style={{ color: "#fff" }}>SUN FILMES</strong> reúne diferentes olhares, experiências e formas de criar em torno de um mesmo propósito: contar histórias por meio do audiovisual. Acreditamos que a criatividade nasce da diversidade e que cada produção é uma oportunidade de transformar ideias em experiências significativas.
             </p>
           </div>
         </div>
@@ -501,7 +501,7 @@ export default function CaliforniaDreams() {
           {/* Col 1: Logo + descripción */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
             <FilmLogo size={72} />
-            <span style={{ fontFamily: FONT, fontWeight: 800, fontSize: 17, color: GOLD, letterSpacing: "0.12em" }}>Sun Films</span>
+            <span style={{ fontFamily: FONT, fontWeight: 800, fontSize: 17, color: GOLD, letterSpacing: "0.12em" }}>SUN FILMES</span>
             <p style={{ fontFamily: FONT, fontSize: 14, color: "#888", lineHeight: 1.7, margin: 0, maxWidth: 260 }}>
               Realizando sonhos e escrevendo uma nova história.
             </p>
@@ -566,7 +566,7 @@ export default function CaliforniaDreams() {
 
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid #2a1a4a", padding: "20px 24px", textAlign: "center", color: "#444", fontSize: 13, fontFamily: FONT }}>
-          © 2026 Sun Films. Todos os direitos reservados.
+          © 2026 SUN FILMES. Todos os direitos reservados.
         </div>
       </footer>
 

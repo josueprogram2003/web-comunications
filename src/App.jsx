@@ -120,9 +120,9 @@ const crewMembers = [
   { name: "João Crepaldi",       role: "Director de Fotografía", img: "/DSC09866.jpg.jpeg" },
   { name: "Catalina Olarte",    role: "Diretora, editora e VFX",              img: "/DSC09887.jpg.jpeg" },
   { name: "Jessie Hernández", role: "Producción General e Making Of",               img: "/DSC09912.jpg.jpeg" },
-  { name: "Yasmín Olivera",  role: "Roteirista, Assistente de produção",                                               img: "/DSC098754.jpeg" },
+  { name: "Yasmín Oliveira",  role: "Roteirista, Assistente de produção",                                               img: "/DSC098754.jpeg" },
   { name: "Keren Pautt",     role: "Roteirista, Captação de Making Of, Assistente de produção",                                               img: "/DSC025874.jpeg" },
-  { name: "Isabela Brito",   role: "Direção de Arte",                                               img: "/ISABELA_BRITO.jpeg" },
+  { name: "Isabela Brito",   role: "Direção de Arte",                                               img: "/DSC09392.jpg" },
 ];
 
 

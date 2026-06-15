@@ -122,6 +122,7 @@ const crewMembers = [
   { name: "Jessie Hernández", role: "Produção e auxiliar de maquiagem",               img: "/DSC09912.jpg.jpeg" },
   { name: "Yasmín Olivera",  role: "",                                               img: "/DSC098754.jpeg" },
   { name: "Keren Pautt",     role: "",                                               img: "/DSC025874.jpeg" },
+  { name: "Isabela Brito",   role: "",                                               img: "/ISABELA_BRITO.jpeg" },
 ];
 
 
@@ -265,7 +266,7 @@ function FreeTrial() {
         transition: "background .25s, border .25s",
         whiteSpace: "nowrap",
       }}>
-      veja agora
+      Veja Agora
     </button>
   );
 }
@@ -379,12 +380,10 @@ export default function CaliforniaDreams() {
       </nav>
 
       {/* ══ HERO ══ */}
-      <section id="hero" style={{ marginTop: 72, width: "100%", height: "calc(100vh - 72px)", position: "relative", overflow: "hidden", display: "flex", alignItems: "flex-end", justifyContent: "center", paddingBottom: 64, background: `linear-gradient(135deg, #0d0a22 0%, #1a0a30 50%, #0d0a22 100%)` }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 30% 50%, rgba(58,80,240,.25) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(208,64,190,.2) 0%, transparent 60%)" }}/>
+      <section id="hero" style={{ marginTop: 72, width: "100%", height: "calc(100vh - 72px)", position: "relative", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", paddingBottom: 0 }}>
+        <img src="/TERMOS DE USO_2.png" alt="Termos de Uso" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}/>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(8,6,26,0.35)" }}/>
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to top,#08061a 0%,transparent 100%)" }}/>
-        <h1 className="hero-title" style={{ position: "relative", zIndex: 1, fontWeight: 800, letterSpacing: "0.06em", fontFamily: FONT, background: "linear-gradient(180deg,#c080ff 0%,#8030cc 50%,#d040be 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", lineHeight: 1, margin: 0, textAlign: "center", padding: "0 20px" }}>
-          TERMOS DE USO
-        </h1>
       </section>
 
       {/* ══ TEASER ══ */}

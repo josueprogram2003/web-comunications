@@ -113,16 +113,16 @@ const castMembers = [
 
 const crewMembers = [
   { name: "Vitória Gomes",    role: "Assistente de direção de arte, maquiagem",                img: "/DSC09599.jpg.jpeg" },
-  { name: "Bruno Gonçalves", role: "Producción Ejecutiva",                    img: "/DSC09665.jpg.jpeg" },
+  { name: "Bruno Gonçalves", role: "Produção Executiva",                    img: "/DSC09665.jpg.jpeg" },
   { name: "William Thompson", role: "Captação de áudio",                 img: "/DSC09731.jpg.jpeg" },
   { name: "Hesek Boñon",   role: "Pesquisa e assistente de produção",                            img: "/DSC09812.jpg.jpeg" },
   { name: "Roberto Lima",  role: "Gaffer",                 img: "/DSC09839.jpg.jpeg" },
-  { name: "João Crepaldi",       role: "Director de Fotografía", img: "/DSC09866.jpg.jpeg" },
+  { name: "João Crepaldi",       role: "Diretor de Fotografia", img: "/DSC09866.jpg.jpeg" },
   { name: "Catalina Olarte",    role: "Diretora, editora e VFX",              img: "/DSC09887.jpg.jpeg" },
-  { name: "Jessie Hernández", role: "Producción General e Making Of",               img: "/DSC09912.jpg.jpeg" },
+  { name: "Jessie Hernández", role: "Produção Geral e Making Of",               img: "/DSC09912.jpg.jpeg" },
   { name: "Yasmín Oliveira",  role: "Roteirista, Assistente de produção",                                               img: "/DSC098754.jpeg" },
   { name: "Keren Pautt",     role: "Roteirista, Captação de Making Of, Assistente de produção",                                               img: "/DSC025874.jpeg" },
-  { name: "Isabela Brito",   role: "Direção de Arte",                                               img: "/DSC09392.jpg" },
+  { name: "Isabela Brito",   role: "Direção de Arte",                                               img: "/DSC09392.jpeg" },
 ];
 
 
@@ -432,7 +432,7 @@ export default function CaliforniaDreams() {
         {/* Banner */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 40 }}>
           <PlayThumb
-            src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=800&h=320&fit=crop"
+            src="/making.png"
             label="MAKING OF" height={200}/>
         </div>
         {/* Veja Agora button */}
@@ -553,7 +553,7 @@ export default function CaliforniaDreams() {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
             <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 14, color: GOLD, letterSpacing: "0.08em", textTransform: "uppercase" }}>Links Rápidos</span>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {[["Início","hero"],["Teaser","teaser"],["Elenco","elenco"],["Making Of","making-of"],["Produtora","produtora"]].map(([label, id]) => (
+              {[["Início","hero"],["Teaser","teaser"],["Making Of","making-of"],["Produtora","produtora"],["Pasta de Produção","pasta"]].map(([label, id]) => (
                 <button key={id} onClick={() => goto(id)}
                   onMouseEnter={e => e.currentTarget.style.color = GOLD}
                   onMouseLeave={e => e.currentTarget.style.color = "#888"}

@@ -390,7 +390,7 @@ export default function CaliforniaDreams() {
       {/* ══ TEASER ══ */}
       <section id="teaser" className="section-pad" style={{ background: BG, display: "flex", flexDirection: "column", alignItems: "center", gap: 36 }}>
         <PlayThumb
-          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=320&fit=crop&q=80"
+          src="/PORTADA.png"
           label="TEASER" height={200}/>
         <GoldButton onClick={() => window.open("https://www.youtube.com/watch?v=qBtpMlnyAV4", "_blank")}>Veja Agora</GoldButton>
       </section>
